@@ -1,0 +1,14 @@
+<p>
+  slider works!
+</p>
+
+<div class="bg">
+
+  <img *ngFor="let imagem of imagens"
+  [src]="imagem.url"
+  [@banner]="imagem.estado"
+  class="slide">
+
+</div>
+<br>
+
