@@ -1,0 +1,13 @@
+<p>
+  transitions works!
+</p>
+<button (click)="showBoxOne()">BOX A</button>
+<button (click)="showBoxTwo()">BOX B</button>
+<br>
+<div @transition2 *ngIf="box1" class="box">
+  <p>The box A is inserted</p>
+</div>
+<div @transition2 *ngIf="box2" class="box">
+  <p>The box B is inserted</p>
+</div>
+
