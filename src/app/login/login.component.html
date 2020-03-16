@@ -1,5 +1,5 @@
-<div class="step1">
-      <form [formGroup]="formloginStep1">
+<div class="step1" *ngIf="firstStep">
+  <form [formGroup]="formloginStep1">
     <input type="text" id="username"
     formControlName="username"
     (keyup)="onKey($event)"
@@ -8,6 +8,13 @@
   </form>
 </div>
 
-<div class="step2"></div>
+<div class="step2" *ngIf="secondStep">
+    <form [formGroup]="formloginStep2">
+      <input type="password" formControlName="password">
+      <button>OK</button>
+      </form>
+
+</div>
 
   <p>{{formattedMessage}}</p>
+
